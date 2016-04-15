@@ -1,0 +1,31 @@
+<div ng-controller="viewOne">
+	<div class="tab">
+		<ul class="tab-pills">
+		    <li ng-repeat="tab in grid.appScope.tableTabs" 
+		        ng-class="{active:isActiveTableTab(tab.url)}" 
+		        ng-click="onClickTableTab(tab)"><h3>{{tab.title}}</h3></li>
+		</ul>
+	</div>
+	<div id="mainView">
+	    <div ng-include="currentTableTab"></div>
+	</div>
+</div>
+<script type="text/ng-template" id="details.tpl.html">
+	<div id="viewOne" >
+		<h1>View One</h1>
+		<!--<ul ng-repeat="(key, value) in row.entity.subData ">
+	        Group name: {{ key }}
+	        <li ng-repeat="time in value">
+	            startTime: {{ time.availabilityStartTime }}
+	            endTime: {{ time.availabilityEndTime }}
+	        </li>
+	    </ul>-->
+	</div>
+</script>
+
+<script type="text/ng-template" id="history.tpl.html">
+	<div id="viewTwo">
+		<h1>View Two</h1>
+		<div ui-grid="row.entity.subGridOptions" class="subGrid"></div>
+	</div>
+</script>

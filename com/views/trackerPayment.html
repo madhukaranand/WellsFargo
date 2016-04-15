@@ -1,0 +1,43 @@
+<div class="payment">
+	<div class="searchPanel">
+	   	<form method="post" name="form.searchForm" novalidate class="searchForm form-inline">
+			
+			<div class="form-group">
+				<select>
+					<option value="all but complete">All But Complete[X622683]</option>
+					<option value="option 2">option 2</option>
+					<option value="option 3">option 3</option>
+					<option value="option 4">option 4</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<div class='input-group input-daterange' id='datepicker' date-picker>
+	               <input type='text' class="form-control" name="start"/>
+	                <span class="input-group-addon" >
+	                    <span class="glyphicon glyphicon-calendar"></span>
+	                </span>
+
+	                <input type="text" class="form-control" name="end" style="margin-left:10px"/>
+	                <span class="input-group-addon">
+	                    <span class="glyphicon glyphicon-calendar"></span>
+	                </span>
+	            </div>
+	    	</div>
+		    <div class="form-group">
+	            <button href="">Maintenance</button>
+	        </div>
+	        <div class="form-group">
+	        	<button href="" ui-sref="payment.paymentSearch">Search Using template</button>
+			</div>
+				
+		</form>
+		<!--<div class="col-md-2 col-sm-2">
+			<ul class="activity_list">
+				<li class="pull-right"><a href=""><img src="images/img_to_excel.png" alt="Export to excel" title="Export to excel"/></a></li>
+			</ul>
+		</div>-->
+		
+	</div>
+	<!--<div ui-view="maintenance"></div>-->
+	<div ui-view></div>
+</div>

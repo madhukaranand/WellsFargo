@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Wells Fargo</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.css">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/forms.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+    <header class="">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 noPadding">
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <a title="Wells Fargo" class="navbar-brand logo" href="#">
+                      <img class="img-responsive mob-header-nav" alt="Wells Fargo" src="images/logo.png">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li class="body-content">
+                      <h2>Payment Tracker</h2>
+                      <p>Track the flow of money</p>
+                  </li>
+                </ul>
+                  
+                <div class="navbar-wrapper">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="border-right loggedUser"><span class="smallTxt">Welcome</span><span class="semibold">John Smith</span></li>
+                    <li><a href="#" class="imgCentered"><img class="img-responsive" alt="Log Out" src="images/logout-icon.png"></a></li>
+                  </ul>
+                </div>
+            </nav>
+          </div> 
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="containerInner" ng-controller="globalController">
+        <div class="sidebar-wrapper" id="slidePanel">
+          <ul class="nav">
+            <li ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}" ng-click="onClickTab(tab)">
+                <a ui-sref="{{tab.tabclass}}" ui-sref-active="active">
+                  <span class="actionLabel">{{tab.title}}</span>
+                </a>
+                <ul class="nestedTab" >
+                  <li ui-sref-active="active"><a ui-sref="payment.maintenance">Maintenance</a></li>
+                </ul>
+                <!--div class="activeTriangle"></div-->
+            </li>
+          </ul>
+        </div>
+        <div class="content" ui-view>
+        </div>
+      </div>
+
+    </div>
+        
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.1.1/ui-grid.min.js"></script>
+
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/ui-bootstrap-tpls-1.2.4.min.js"></script>
+    <script src="lib/angular-bootstrap-datepicker.js"></script>
+    <script src="com/module/app.js"></script>
+        
+    <script src="com/controller/paymentTrackerController.js"></script>
+    <script src="com/controller/globalController.js"></script>
+    <script src="com/services/paymentTrackerService.js"></script>
+    <script src="com/services/uiGridService.js"></script>
+
+    <script src="com/directives/datePicker.js"></script>
+ </body>
+</html>

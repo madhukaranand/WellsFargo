@@ -1,0 +1,47 @@
+.searchForm .form-group {
+	margin-bottom: 0;
+}
+
+.formEle {
+	float: left;
+	padding-right: 1rem;
+}
+
+.templateEle {
+	width: 240px;
+}
+
+.rangeDate .input-group .form-control {
+	width: 232px;
+}
+
+.searchPanel select, .searchPanel input {
+	border-radius: 4px;
+	padding: 10px 15px;
+	width: 100%;
+	border: 1px solid #d5d5d4;
+	margin-right: 10px;
+}
+.searchPanel input {
+	padding: 11px 15px;
+}
+.searchPanel input.datepicker {
+	width: 23%;
+}
+.searchPanel form button {
+	padding: 12px 30px;
+	background-color: #ffffff;
+	border-radius: 50px;
+	border: none;
+	text-transform: uppercase;
+	margin-right: 10px;
+	border: 1px solid #d5d5d4;
+}
+
+.input-group-addon {
+	background-color: #FFF;
+}
+
+.input-daterange .form-control {
+	border-right: 0;
+}
